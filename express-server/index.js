@@ -13,3 +13,7 @@ app.get('/', function(request, response){
 app.get('/meg', function(request, response){
 	response.send("Hei jeg heter Henrik og jeg er 17 år gammel");
 });
+
+app.get('/test/:tall', function(request, response){
+	response.send(`Du skrev inn tallet ${request.params.tall}`);
+});
